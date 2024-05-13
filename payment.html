@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment Method Form</title>
+<style>
+    input[type="text"] {
+        width: 100%;
+        padding: 8px;
+        margin: 5px 0;
+        box-sizing: border-box;
+    }
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+    }
+    #receipt {
+        display: none;
+        margin-top: 20px;
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+</style>
+</head>
+<body>
+
+<h2>Payment Method</h2>
+
+<form id="paymentForm" onsubmit="return validateCard()">
+    <label for="cardType">Card Type:</label>
+    <select id="cardType" name="cardType">
+        <option value="visa">Visa</option>
+        <option value="mastercard">MasterCard</option>
+        <option value="amex">American Express</option>
+    </select><br><br>
+    
+    <label for="cardNumber">Card Number:</label>
+    <input type="text" id="cardNumber" name="cardNumber" placeholder="Enter 10-digit card number"><br><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+<div id="receipt">
+    <h3>Receipt</h3>
+    <p>Card Type: <span id="receiptCardType"></span></p>
+    <p>Card Number: <span id="receiptCardNumber"></span></p>
+    <p>Amount Paid sucessfully</p>
+</div>
+
+<script>
+function validateCard() {
+ 
+    var cardNumber = document.getElementById("cardNumber").value;
+    var cardType = document.getElementById("cardType").value;
+    
+  
+    var cardRegex = /^\d{10}$/;
+  
+    if (!cardRegex.test(cardNumber)) {
+        alert("Invalid card number. Please enter a 10-digit card number.");
+        return false; 
+    }
+    
+   
+    document.getElementById("receiptCardType").textContent = cardType;
+    document.getElementById("receiptCardNumber").textContent = cardNumber.replace(/.(?=.{4})/g, '*'); 
+    document.getElementById("receipt").style.display = "block";
+    
+    return false; 
+}
+</script>
+
+</body>
+</html>

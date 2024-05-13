@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxi Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.querySelector('.hamburger');
+            const navigation = document.querySelector('.navigation');
+        
+            hamburger.addEventListener('click', function () {
+                navigation.classList.toggle('active');
+            });
+        });
+        </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="image/logo.jpg" alt="Taxi Booking Logo">
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#About Us">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="Booking.html" class="cta-btn">Book Now</a>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header> 
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>BOOK YOUR TAXI</h1><br>
+            <h1>Ride with Easy, Anytime, Anywhere</h1>
+            <p>Book your next ride with our reliable taxi service.</p>
+            <a href="booking.html" class="cta-btn">Book Now</a>
+        </div>
+    </div>
+</section>
+<section class="services" id="services">
+    <h2>Our Services</h2>
+    <div class="container">
+        <div class="service-item">
+            <img src="image/OIP2.jpg" alt="Service 1">
+            <h3>Standard Rides</h3>
+            <p>Reliable standard taxi service for everyday transportation needs.</p>
+        </div>
+        <div class="service-item">
+            <img src="image/OIP1.jpg" alt="Service 2">
+            <h3>Premium Rides</h3>
+            <p>Luxurious rides with premium vehicles for special occasions or business trips.</p>
+        </div>
+        <div class="service-item">
+            <img src="image/OIP3.jpg" alt="Service 3">
+            <h3>Airport Transfers</h3>
+            <p>Efficient transfers to and from airports with reliable pickup and drop-off services.</p>
+        </div>
+    </div>
+</section>
+<section class="Work-Services">
+    <h2>How It Works</h2>
+    <div class="work-container">
+            <div class="work-service-item">
+                <img src="image/taxi1.png" alt="Step 1">
+                <h3>Select Pickup Location</h3>
+                <p>Choose your current location for pickup.</p>
+            </div>
+            <div class="work-service-item">
+                <img src="image/taxi2.jpg" alt="Step 2">
+                <h3>Choose Destination</h3>
+                <p>Specify your destination for the ride.</p>
+            </div>
+            <div class="work-service-item">
+                <img src="image/taxi3.jpg" alt="Step 3">
+                <h3>Confirm Booking</h3>
+                <p>Review your details and confirm your booking.</p>
+            </div>
+    </div>
+</section>
+<section class="About Us" id="About Us">
+    <div class="abt-container">
+            <h2>About Us</h2>
+            <p>We are a leading taxi booking service committed to providing reliable transportation solutions for our customers. With a team of professional drivers and a fleet of well-maintained vehicles, we ensure that you reach your destination safely and on time.</p>
+            <p>At Taxi Booking, customer satisfaction is our top priority. We strive to offer convenient booking options, competitive pricing, and excellent customer service. Whether you need a ride for your daily commute or a special event, you can count on us for a comfortable and enjoyable journey.</p>
+    </div>
+</section>
+<section class="testimonials">
+    <h2>Testimonials</h2>
+    <div class="container">
+        <div class="testimonial">
+            <img src="image/taxi4.png" alt="User 1">
+            <p>"Great service! The driver was friendly and arrived on time. I will definitely use this taxi booking service again."</p>
+            <cite>- John Doe</cite>
+        </div>
+        <div class="testimonial">
+            <img src="image/taxi5.webp" alt="User 2">
+            <p>"I'm impressed with the professionalism of the drivers and the ease of booking. Highly recommend!"</p>
+            <cite>- Jane Smith</cite>
+        </div>
+    </div>
+</section>
+<section class="faq">
+    <div class="faq-container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h3>How do I book a taxi?</h3>
+            <p>To book a taxi, simply visit our website. Enter your pickup location, destination, and desired time. Then, confirm your booking to schedule your ride.</p>
+        </div>
+        <div class="faq-item">
+            <h3>What are your operating hours?</h3>
+            <p>Our taxi service operates 24/7, so you can book a ride anytime, day or night. Whether you need a ride early in the morning or late at night, we're here to serve you.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How much does a ride cost?</h3>
+            <p>The cost of your ride depends on factors such as distance, time of day, and type of vehicle. We offer competitive pricing and transparent fare estimates, so you'll know the cost upfront before booking.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How i pay?</h3>
+            <p>By using of your debit card or By using of your UIP ID Like g-pay,phonepay</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="contact" id="contact">
+    <div class="Contact-container">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <p><strong>Email:</strong> dharani@taxibooking.com</p>
+            <p><strong>Phone:</strong> +1 (123) 456-7890</p>
+            <p><strong>Address:</strong> 123 Main Street, City, Country</p>
+        </div>
+        <form class="contact-form">
+            <input type="text" name="name" placeholder="Your Name">
+            <input type="email" name="email" placeholder="Your Email">
+            <textarea name="message" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+
+
+<footer class="footer">
+
+    <div class="footer-bottom">
+      &copy; 2024 Taxi Booking. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>

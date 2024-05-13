@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxi Booking</title>
+    <link rel="stylesheet" href="booking-styles.css">
+</head>
+<body>
+    <div class="booking-container">
+        <h1>Book Your Taxi</h1>
+        <form id="booking-form" action="#" method="POST">
+            <div class="form-group">
+                <label for="pickup">Pickup Location</label>
+                <input type="text" id="pickup" name="pickup" >
+            </div>
+            <div class="form-group">
+                <label for="destination">Destination</label>
+                <input type="text" id="destination" name="destination">
+            </div>
+            <div class="form-group">
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="time">Time</label>
+                <input type="time" id="time" name="time" required>
+            </div>
+            <button type="submit">Book Now</button>
+            <a href="payment.html" class="cta-btn">Pay now</a>
+        </form>
+      
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var form = document.querySelector('.booking-container form');
+        
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+        
+                var pickup = document.getElementById('pickup').value.trim();
+                var destination = document.getElementById('destination').value.trim();
+                var date = document.getElementById('date').value.trim();
+                var time = document.getElementById('time').value.trim();
+        
+                if (!pickup || !destination || !date || !time) {
+                    alert("Please fill  all the fields.");
+                } 
+                else {
+                    alert("Thanks for booking!");
+                    form.reset();
+                }
+            });
+        });
+        
+    </script>
+</body>
+</html>
